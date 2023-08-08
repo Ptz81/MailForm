@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <form action="#" id="form" class="form_body">
+                <h1 class="form_title">Відправка даних на пошту</h1>
+               
+                <div class="form_item">
+                    <label for="formName" class="form_label">Name*</label>
+                    <input id='formName' type="text" name="name" class="form_input _req">
+                </div>
+
+                <div class="form_item">
+                    <label for="formMail" class="form_label">Email*</label>
+                    <input id='formMail' type="email" name="email" class="form_input _req _email">
+                </div>
+
+                <div class="form_item">
+                    <div class="form_label">Male or Female</div>
+                    <div class="options">
+                        <div class="options_item">
+                            <input id='formGenderMale' checked value='male' type="radio" name="gender" class="options_input">
+                            <label for="formGenderMale" class="options_label"><span>Male</span></label>
+                        </div>
+                        <div class="options_item">
+                            <input id='formGenderFemale' value='female' type="radio" name="gender" class="options_input">
+                            <label for="formGenderFemale" class="options_label"><span>Female</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form_item">
+                    <label for="formMessage" class="form_label">Message</label>
+                    <textarea id='formMessage' name="message" class="form_input"></textarea>
+                </div>
+
+                <div class="form_item">
+                    <div class="form_label">Age</div>
+                    <select name="age" class="form_select">
+                        <option value="до 18 років" selected>Неповнолітній</option>
+                        <option value="18-60 років">Працюючий</option>
+                        <option value="більше 60 років">Пенсіонер</option>
+                    </select>
+                </div>
+            
+
+                <div class="form_item">
+                    <div class="form_label">Прикріпити фото</div>
+                    <div class="file">
+                        <div class="file_item">
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file_input">
+                        <div class="file_button">Вибрати</div>
+                        </div>
+                        <div id='formPreview' class="file_preview"></div>
+                    </div>
+                </div>
+
+                    <div class="form_item">
+                        <div class="checkbox">
+                            <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox_input _req">
+                            <label for="formAgreement" class="checkbox_label"><span>I agree with policy and agreement based on <a href="#">Rules</a></span></label>
+                        </div>
+                    </div>
+
+                <button type="submit" class="form_button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
